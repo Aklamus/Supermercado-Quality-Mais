@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Supermercado Quality mais - Qualidade e Preço Justo em Hortolândia</title>
+    <link rel="icon" type="image/x-icon" href="qualitymais_logo.png">
+    <meta name="description" content="Supermercado Quality mais no Jardim Nova América, Hortolândia. Encontre produtos frescos, carnes de primeira, pão quentinho e as melhores ofertas da semana. Fazemos delivery!">
+    <meta name="keywords" content="supermercado, hortolândia, jardim nova américa, mercado, açougue, padaria, hortifrúti, ofertas, delivery">
+    
+    <meta property="og:title" content="Supermercado Quality mais - O seu vizinho de confiança!" />
+    <meta property="og:description" content="Qualidade, comodidade e atendimento familiar no coração do Jardim Nova América. Confira nossas ofertas!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.qualitymais.com.br" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1583258292688-d0213dc5a3a8?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200" />
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50">
+
+    <!-- Barra Superior -->
+    <div class="bg-green-800 text-white text-sm font-medium no-print">
+        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+            <div id="status-loja" class="flex items-center">
+                <span class="inline-block bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    <i class="fas fa-check-circle mr-1"></i>Aberto agora
+                </span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="hidden md:flex items-center">
+                    <i class="fas fa-truck mr-2 animate-pulse"></i>Delivery grátis acima de R$ 100
+                </span>
+                <span class="hidden lg:flex items-center">
+                    <i class="fab fa-whatsapp mr-2"></i>Pedidos: (19) 99999-5678
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navegação -->
+    <nav id="navbar" class="bg-white/90 backdrop-blur-sm sticky top-0 z-50 transition-all duration-300 shadow-sm no-print">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-3">
+                <a href="#" class="text-2xl font-bold text-green-700 flex items-center">
+                    <img src="qualitymais_logo.png" alt="Quality mais Logo" class="h-10 mr-2">
+                </a>
+                <div class="hidden md:flex space-x-6 items-center text-gray-700 font-medium text-sm">
+                    <a href="#sobre" class="nav-link">Sobre</a>
+                    <a href="#swot" class="nav-link">Análise SWOT</a>
+                    <a href="#setores" class="nav-link">Setores</a>
+                    <a href="#ofertas" class="nav-link">Ofertas</a>
+                    <a href="#equipe" class="nav-link">Equipe</a>
+                    <div class="relative group">
+                        <button class="nav-link flex items-center">
+                            Mais <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden group-hover:block transition-all duration-300">
+                            <a href="#sustentabilidade" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sustentabilidade</a>
+                            <a href="#nutricao" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Nutrição</a>
+                            <a href="#servicos" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Serviços</a>
+                            <a href="#depoimentos" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Depoimentos</a>
+                        </div>
+                    </div>
+                    <a href="#contato" class="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors">Contato</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="#sobre" class="mobile-nav-link">Sobre</a>
+            <a href="#swot" class="mobile-nav-link">Análise SWOT</a>
+            <a href="#setores" class="mobile-nav-link">Setores</a>
+            <a href="#ofertas" class="mobile-nav-link">Ofertas</a>
+            <a href="#equipe" class="mobile-nav-link">Equipe</a>
+            <a href="#sustentabilidade" class="mobile-nav-link">Sustentabilidade</a>
+            <a href="#nutricao" class="mobile-nav-link">Nutrição</a>
+            <a href="#servicos" class="mobile-nav-link">Serviços</a>
+            <a href="#depoimentos" class="mobile-nav-link">Depoimentos</a>
+            <a href="#contato" class="mobile-nav-link">Contato</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Header Principal -->
+        <header class="gradient-bg text-white pt-24 pb-20 relative overflow-hidden">
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight tracking-tight animate-fadeIn">
+                        Supermercado Quality<span class="text-yellow-300">mais</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-4 text-green-100 font-light animate-fadeIn delay-100">
+                        Qualidade e Comodidade no Coração do Jardim Nova América
+                    </p>
+                    <p class="text-lg md:text-xl text-green-200 mb-8 max-w-2xl mx-auto animate-fadeIn delay-200">
+                        As melhores marcas, produtos sempre frescos e um atendimento amigo que você já conhece e confia há mais de 15 anos.
+                    </p>
+                    <div class="flex flex-col md:flex-row gap-4 justify-center items-center animate-fadeIn delay-300">
+                        <a href="#ofertas" class="bg-yellow-400 text-green-900 font-bold text-lg px-8 py-4 rounded-full hover:bg-yellow-500 transition-transform hover:scale-105 inline-block shadow-lg">
+                            <i class="fas fa-tags mr-2"></i> Ver Ofertas da Semana
+                        </a>
+                        <a href="#swot" class="bg-transparent border-2 border-white text-white font-bold text-lg px-8 py-4 rounded-full hover:bg-white hover:text-green-700 transition-all inline-block shadow-lg">
+                            <i class="fas fa-chart-line mr-2"></i> Nossa Análise SWOT
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute inset-0 bg-black opacity-20"></div>
+            <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-50 to-transparent"></div>
+        </header>
+
+        <!-- Estatísticas -->
+        <section class="py-8 bg-gray-50 -mt-16 relative z-20">
+            <div class="container mx-auto px-4">
+                <div class="bg-white rounded-xl shadow-lg p-6 max-w-4xl mx-auto">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                        <div class="p-4">
+                            <div class="text-3xl font-bold text-green-700 mb-2 counter" data-target="15000">0</div>
+                            <div class="text-gray-600 text-sm">Clientes Atendidos</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="text-3xl font-bold text-blue-700 mb-2 counter" data-target="5000">0</div>
+                            <div class="text-gray-600 text-sm">Produtos Diferentes</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="text-3xl font-bold text-yellow-700 mb-2 counter" data-target="12">0</div>
+                            <div class="text-gray-600 text-sm">Funcionários</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="text-3xl font-bold text-red-700 mb-2 counter-percent" data-target="98">0</div>
+                            <div class="text-gray-600 text-sm">Satisfação dos Clientes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="sobre" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Bem-vindo ao seu mercado de bairro!</h2>
+                        <div class="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+                        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                            Mais que um supermercado, somos uma família que cuida da sua família há mais de uma década.
+                        </p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-700 mb-4">Nossa Missão</h3>
+                            <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                                Fundado em 2008 com o sonho de trazer mais qualidade e praticidade para o dia a dia dos moradores do <strong class="text-green-700">Jardim Nova América</strong>, o Supermercado Quality mais nasceu de uma visão simples: ser mais que um comércio, ser parte da comunidade.
+                            </p>
+                            <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                                Nosso compromisso é oferecer produtos de qualidade, com preços justos e um atendimento que faz você se sentir em casa. Acreditamos que cada cliente é único e merece nossa atenção personalizada.
+                            </p>
+                            
+                            <div class="grid md:grid-cols-2 gap-4 mb-6">
+                                <div class="bg-green-50 p-4 rounded-lg hover-effect">
+                                    <h4 class="font-semibold text-green-800 mb-2 flex items-center">
+                                        <i class="fas fa-heart mr-2 text-green-600"></i>Valores
+                                    </h4>
+                                    <ul class="text-sm text-gray-700 space-y-1">
+                                        <li class="flex items-start"><span class="text-green-600 mr-2">•</span>Qualidade sempre</li>
+                                        <li class="flex items-start"><span class="text-green-600 mr-2">•</span>Preço justo</li>
+                                        <li class="flex items-start"><span class="text-green-600 mr-2">•</span>Atendimento familiar</li>
+                                        <li class="flex items-start"><span class="text-green-600 mr-2">•</span>Comunidade</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-blue-50 p-4 rounded-lg hover-effect">
+                                    <h4 class="font-semibold text-blue-800 mb-2 flex items-center">
+                                        <i class="fas fa-bullseye mr-2 text-blue-600"></i>Objetivos
+                                    </h4>
+                                    <ul class="text-sm text-gray-700 space-y-1">
+                                        <li class="flex items-start"><span class="text-blue-600 mr-2">•</span>Facilitar sua vida</li>
+                                        <li class="flex items-start"><span class="text-blue-600 mr-2">•</span>Produtos frescos</li>
+                                        <li class="flex items-start"><span class="text-blue-600 mr-2">•</span>Inovação contínua</li>
+                                        <li class="flex items-start"><span class="text-blue-600 mr-2">•</span>Sustentabilidade</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="bg-green-50 border-l-4 border-green-600 p-6 rounded-r-lg hover-effect">
+                                <h4 class="text-xl font-semibold text-green-800 mb-2 flex items-center">
+                                    <i class="fas fa-handshake mr-2"></i>Nosso Foco: Você!
+                                </h4>
+                                <p class="text-gray-700">
+                                    Operamos no modelo B2C (Business-to-Consumer), o que significa que nosso foco é 100% em atender você, consumidor final. Cada decisão que tomamos tem como objetivo melhorar sua experiência de compra.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600" 
+                                 alt="Interior moderno do supermercado Quality mais" 
+                                 class="w-full h-64 object-cover rounded-lg shadow-lg hover-effect">
+                            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600" 
+                                 alt="Produtos frescos e de qualidade" 
+                                 class="w-full h-64 object-cover rounded-lg shadow-lg hover-effect">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Análise SWOT -->
+        <section id="swot" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Análise SWOT - Quality mais</h2>
+                    <div class="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                        Conheça nossos pontos fortes, áreas de melhoria, oportunidades de crescimento e como enfrentamos os desafios do mercado.
+                    </p>
+                </div>
+
+                <div class="swot-matrix">
+                    <!-- Forças (Strengths) -->
+                    <div class="swot-quadrant swot-strengths">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center">
+                            <i class="fas fa-trophy mr-3"></i>Forças
+                        </h3>
+                        <div class="swot-item">
+                            <i class="fas fa-map-marker-alt swot-icon"></i>
+                            <span>Localização estratégica no Jardim Nova América</span>
+                        </div>
+                        <div class="swot-item">
+                            <i class="fas fa-users swot-icon"></i>
+                            <span>Atendimento familiar e personalizado</span>
+                        </div>
+                        <div class="swot-item">
+                            <i class="fas fa-clock swot-icon"></i>
+                            <span>Mais de 15 anos de experiência no mercado</span>
+                        </div>
+                        <div class="swot-item">
+                            <i class="fas fa-truck swot-icon"></i>
+                            <span>Serviço de delivery estabelecido</span>
+                        </div>
+                        <div class="swot-item">
+                            <i class="fas fa-star swot-icon"></i>
+                            <span>98% de satisfação dos clientes</span>
+                        </div>
+                        <div class="swot-item">
+                            <i class="fas fa-shopping-basket swot-icon"></i>
+                            <span>Variedade de 5.000+ produtos</span>
+                        </div>
+                    </div>
+
+                    <!-- Fraquezas (Weaknesses) -->
+                    <div class="swot-quadrant swot-weaknesses">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center">
+                            <i class="fas fa-exclamation-triangle mr-3"></i>Fraquezas
+                        </h3>
+                        <div class="swot-item">
+                            <i class="fas fa-building swot-icon"></i>
+                            <span>Tamanho limitado comparado às grandes redes</span>
+                        </div>
+                        <div class="swot-item">
+                            <i class="fas fa-dollar-sign swot-icon"></i>
+                            <span>Menor poder de negociação com fornecedores</span>
+                        </div>
+                        <div class="swot-item">
+                            <i class="fas fa-globe swot-icon"></i>
+                            <span>Presença digital ainda em desenvolvimento</span>
+                        </div>
+                        <div class="swot-item">
+                            <i class="fas fa-chart-line swot-icon"></i>
+                            <span>Orçamento limitado para marketing</span>
+                        </div>
+                        <div class="swot-item">
+                            <i class="fas fa-warehouse swot-icon"></i>
+                            <span>Capacidade de estoque restrita</span>
+                        </div>
+                    </div>
+
+                    <!-- Oportunidades (Opportunities) -->
+                    <div class="swot-quadrant swot-opportunities">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center">
+                            <i class="fas fa-lightbulb mr-3"></i>Oportunidades
+                        </h3>
+                        <div class="swot-item">
+                            <i class="fas fa-mobile-alt swot-icon"></i>
+                            <span>Desenvolvimento de aplicativo móvel</span>
+                        </div>
+                        <div class="swot-item">
+                            <i class="fas fa-leaf swot-icon"></i>
+                            <span>Crescimento do mercado de produtos orgânicos</span>
+                        </div>
+                        <div class="swot-item">
+                            <i class="fas fa-heart swot-icon"></i>
+                            <span>Foco em alimentação saudável e bem-estar</span>
+                        </div>
+                        <div class="swot-item">
+                            <i class="fas fa-handshake swot-icon"></i>
+                            <span>Parcerias com produtores locais</span>
+                        </div>
+                        <div class="swot-item">
+                            <i class="fas fa-graduation-cap swot-icon"></i>
+                            <span>Programas educacionais sobre nutrição</span>
+                        </div>
+                        <div class="swot-item">
+                            <i class="fas fa-recycle swot-icon"></i>
+                            <span>Iniciativas de sustentabilidade</span>
+                        </div>
+                    </div>
+
+                    <!-- Ameaças (Threats) -->
+                    <div class="swot-quadrant swot-threats">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center">
+                            <i class="fas fa-shield-alt mr-3"></i>Ameaças
+                        </h3>
+                        <div class="swot-item">
+                            <i class="fas fa-store swot-icon"></i>
+                            <span>Concorrência de grandes redes</span>
+                        </div>
+                        <div class="swot-item">
+                            <i class="fa-solid fa-arrow-trend-down swot-icon"></i>
+                            <span>Flutuações econômicas e inflação</span>
+                        </div>
+                        <div class="swot-item">
+                            <i class="fas fa-laptop swot-icon"></i>
+                            <span>Crescimento do e-commerce</span>
+                        </div>
+                        <div class="swot-item">
+                            <i class="fas fa-virus swot-icon"></i>
+                            <span>Impactos de crises sanitárias</span>
+                        </div>
+                        <div class="swot-item">
+                            <i class="fas fa-gas-pump swot-icon"></i>
+                            <span>Aumento dos custos operacionais</span>
+                        </div>
+                        <div class="swot-item">
+                            <i class="fas fa-user-times swot-icon"></i>
+                            <span>Mudanças no comportamento do consumidor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Estratégias baseadas na análise SWOT -->
+                <div class="mt-16 bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">
+                        <i class="fas fa-chess mr-3 text-green-600"></i>Estratégias Baseadas na Análise SWOT
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-green-50 p-6 rounded-lg">
+                            <h4 class="text-xl font-semibold text-green-800 mb-4 flex items-center">
+                                <i class="fas fa-rocket mr-2"></i>Estratégias de Crescimento
+                            </h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+                                    <span>Expandir delivery aproveitando nossa localização privilegiada</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+                                    <span>Desenvolver parcerias com produtores locais para produtos orgânicos</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+                                    <span>Criar programa de fidelidade digital</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-50 p-6 rounded-lg">
+                            <h4 class="text-xl font-semibold text-blue-800 mb-4 flex items-center">
+                                <i class="fas fa-shield-alt mr-2"></i>Estratégias Defensivas
+                            </h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-blue-600 mr-2 mt-1"></i>
+                                    <span>Fortalecer relacionamento com clientes através do atendimento personalizado</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-blue-600 mr-2 mt-1"></i>
+                                    <span>Otimizar operações para manter competitividade de preços</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-blue-600 mr-2 mt-1"></i>
+                                    <span>Investir em tecnologia para melhorar eficiência</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Análise da Concorrência -->
+                <div class="mt-16 bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">
+                        <i class="fas fa-users mr-3 text-orange-600"></i>Análise da Concorrência em Hortolândia
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-red-50 p-6 rounded-lg">
+                            <h4 class="text-xl font-semibold text-red-800 mb-4 flex items-center">
+                                <i class="fas fa-crosshairs mr-2"></i>Rivais Diretos
+                            </h4>
+                            <p class="text-gray-600 mb-4 text-sm">Supermercados que competem diretamente pelo mesmo público:</p>
+                            <ul class="space-y-2 text-gray-700 text-sm">
+                                <li class="flex items-start">
+                                    <i class="fas fa-store text-red-600 mr-2 mt-1"></i>
+                                    <span><strong>Savegnago:</strong> Grande rede com variedade e qualidade</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-store text-red-600 mr-2 mt-1"></i>
+                                    <span><strong>GoodBom:</strong> Rede com forte presença regional</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-store text-red-600 mr-2 mt-1"></i>
+                                    <span><strong>Morete Supermercados:</strong> Foco em produtos frescos</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-store text-red-600 mr-2 mt-1"></i>
+                                    <span><strong>Supermercado Pioneiro:</strong> Mercado de bairro com ofertas</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-store text-red-600 mr-2 mt-1"></i>
+                                    <span><strong>Vila Economia:</strong> Preço justo e estacionamento próprio</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-orange-50 p-6 rounded-lg">
+                            <h4 class="text-xl font-semibold text-orange-800 mb-4 flex items-center">
+                                <i class="fas fa-bullseye mr-2"></i>Rivais Indiretos
+                            </h4>
+                            <p class="text-gray-600 mb-4 text-sm">Atacarejos e outros formatos que competem por volume:</p>
+                            <ul class="space-y-2 text-gray-700 text-sm">
+                                <li class="flex items-start">
+                                    <i class="fas fa-warehouse text-orange-600 mr-2 mt-1"></i>
+                                    <span><strong>Assaí Atacadista:</strong> Atacarejo com preços competitivos</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-warehouse text-orange-600 mr-2 mt-1"></i>
+                                    <span><strong>Arena Atacado:</strong> Vendas no atacado e varejo</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-warehouse text-orange-600 mr-2 mt-1"></i>
+                                    <span><strong>SP Atacarejo Tempreço:</strong> Preços de atacado no bairro</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-mobile-alt text-orange-600 mr-2 mt-1"></i>
+                                    <span><strong>Apps de Delivery:</strong> Conveniência e entrega rápida</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-shopping-basket text-orange-600 mr-2 mt-1"></i>
+                                    <span><strong>Feiras Livres:</strong> Produtos frescos sazonais</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-6 bg-green-50 p-4 rounded-lg">
+                        <h5 class="font-semibold text-green-800 mb-2 flex items-center">
+                            <i class="fas fa-lightbulb mr-2"></i>Nosso Diferencial Competitivo
+                        </h5>
+                        <p class="text-gray-700 text-sm">
+                            Enquanto grandes redes focam em volume e atacarejos em preço, o <strong>Quality mais</strong> se destaca pelo 
+                            <span class="text-green-600 font-semibold">atendimento familiar personalizado</span>, 
+                            <span class="text-green-600 font-semibold">localização estratégica no Jardim Nova América</span> e 
+                            <span class="text-green-600 font-semibold">relacionamento próximo com a comunidade</span>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Setores -->
+        <section id="setores" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nossos Setores</h2>
+                    <div class="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                        Cada setor do Quality mais é pensado para oferecer a melhor experiência de compra, com produtos frescos e de qualidade.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-effect">
+                        <div class="w-full h-48 bg-gray-100 flex items-center justify-center">
+                            <img src="icon_acougue.png" alt="Ícone Açougue" class="w-24 h-24 object-contain">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3 flex items-center">
+                                <i class="fas fa-drumstick-bite mr-2 text-red-600"></i>Açougue
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                Carnes frescas selecionadas diariamente, com cortes especiais e atendimento especializado.
+                            </p>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i>Carnes bovinas premium</li>
+                                <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i>Aves e suínos frescos</li>
+                                <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i>Cortes sob medida</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-effect">
+                        <div class="w-full h-48 bg-gray-100 flex items-center justify-center">
+                            <img src="icon_hortifruti.png" alt="Ícone Hortifrúti" class="w-24 h-24 object-contain">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3 flex items-center">
+                                <i class="fas fa-apple-alt mr-2 text-green-600"></i>Hortifrúti
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                Frutas, verduras e legumes sempre frescos, vindos diretamente dos melhores produtores.
+                            </p>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i>Produtos orgânicos</li>
+                                <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i>Frutas da estação</li>
+                                <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i>Verduras hidropônicas</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-effect">
+                        <div class="w-full h-48 bg-gray-100 flex items-center justify-center">
+                            <img src="icon_padaria.png" alt="Ícone Padaria" class="w-24 h-24 object-contain">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3 flex items-center">
+                                <i class="fas fa-bread-slice mr-2 text-yellow-600"></i>Padaria
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                Pães quentinhos assados diariamente, doces caseiros e produtos de confeitaria.
+                            </p>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i>Pão francês quentinho</li>
+                                <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i>Doces artesanais</li>
+                                <li class="flex items-center"><i class="fas fa-check text-green-600 mr-2"></i>Bolos sob encomenda</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Ofertas -->
+        <section id="ofertas" class="py-20 bg-yellow-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Ofertas da Semana</h2>
+                    <div class="w-24 h-1 bg-yellow-600 mx-auto mb-6"></div>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                        Confira as melhores promoções selecionadas especialmente para você economizar sem abrir mão da qualidade.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-effect product-card" 
+                         data-id="1" data-name="Picanha Bovina Premium" data-price="54.90" data-original-price="69.90"
+                         data-image="https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=300">
+                        <div class="relative">
+                            <div class="w-full h-48 bg-gray-100 flex items-center justify-center">
+                                <img src="icon_picanha.png" alt="Ícone Picanha" class="w-24 h-24 object-contain">
+                            </div>
+                            <div class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                                -21%
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-800 mb-2">Picanha Bovina Premium</h3>
+                            <div class="flex items-center justify-between mb-3">
+                                <div>
+                                    <span class="text-lg font-bold text-green-600">R$ 54,90</span>
+                                    <span class="text-sm text-gray-500 line-through ml-2">R$ 69,90</span>
+                                </div>
+                                <span class="text-xs text-gray-600">kg</span>
+                            </div>
+                            <button class="add-to-cart w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors">
+                                <i class="fas fa-cart-plus mr-2"></i>Adicionar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-effect product-card" 
+                         data-id="2" data-name="Tomate Italiano" data-price="5.99" data-original-price="8.99"
+                         data-image="https://images.unsplash.com/photo-1546470427-e5ac89c8ba81?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=300">
+                        <div class="relative">
+                            <div class="w-full h-48 bg-gray-100 flex items-center justify-center">
+                                <img src="icon_tomate.png" alt="Ícone Tomate" class="w-24 h-24 object-contain">
+                            </div>
+                            <div class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                                -33%
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-800 mb-2">Tomate Italiano</h3>
+                            <div class="flex items-center justify-between mb-3">
+                                <div>
+                                    <span class="text-lg font-bold text-green-600">R$ 5,99</span>
+                                    <span class="text-sm text-gray-500 line-through ml-2">R$ 8,99</span>
+                                </div>
+                                <span class="text-xs text-gray-600">kg</span>
+                            </div>
+                            <button class="add-to-cart w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors">
+                                <i class="fas fa-cart-plus mr-2"></i>Adicionar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-effect product-card" 
+                         data-id="3" data-name="Pão Francês" data-price="14.99" data-original-price="18.90"
+                         data-image="https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=300">
+                        <div class="relative">
+                            <div class="w-full h-48 bg-gray-100 flex items-center justify-center">
+                                <img src="icon_pao_frances.png" alt="Ícone Pão Francês" class="w-24 h-24 object-contain">
+                            </div>
+                            <div class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                                -21%
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-800 mb-2">Pão Francês</h3>
+                            <div class="flex items-center justify-between mb-3">
+                                <div>
+                                    <span class="text-lg font-bold text-green-600">R$ 14,99</span>
+                                    <span class="text-sm text-gray-500 line-through ml-2">R$ 18,90</span>
+                                </div>
+                                <span class="text-xs text-gray-600">kg</span>
+                            </div>
+                            <button class="add-to-cart w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors">
+                                <i class="fas fa-cart-plus mr-2"></i>Adicionar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-effect product-card" 
+                         data-id="4" data-name="Guaraná 2L" data-price="5.50" data-original-price="7.50"
+                         data-image="https://images.unsplash.com/photo-1581636625402-29b2a704ef13?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=300">
+                        <div class="relative">
+                            <div class="w-full h-48 bg-gray-100 flex items-center justify-center">
+                                <img src="icon_guarana.png" alt="Ícone Guaraná" class="w-24 h-24 object-contain">
+                            </div>
+                            <div class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                                -27%
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-800 mb-2">Guaraná 2L</h3>
+                            <div class="flex items-center justify-between mb-3">
+                                <div>
+                                    <span class="text-lg font-bold text-green-600">R$ 5,50</span>
+                                    <span class="text-sm text-gray-500 line-through ml-2">R$ 7,50</span>
+                                </div>
+                                <span class="text-xs text-gray-600">un</span>
+                            </div>
+                            <button class="add-to-cart w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors">
+                                <i class="fas fa-cart-plus mr-2"></i>Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calculadora de Ofertas -->
+                <div class="mt-16 bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">
+                        <i class="fas fa-calculator mr-3 text-green-600"></i>Calculadora de Economia
+                    </h3>
+                    <div class="max-w-md mx-auto">
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2">Produto:</label>
+                            <select id="product-select" class="form-input">
+                                <option value="">Selecione um produto</option>
+                                <option value="picanha">Picanha Bovina Premium</option>
+                                <option value="tomate">Tomate Italiano</option>
+                                <option value="pao">Pão Francês</option>
+                                <option value="guarana">Guaraná 2L</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2">Quantidade:</label>
+                            <input type="number" id="product-quantity" class="form-input" min="1" value="1" step="0.1">
+                        </div>
+                        <button id="calculate-btn" class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors font-bold">
+                            <i class="fas fa-calculator mr-2"></i>Calcular Economia
+                        </button>
+                        <div id="calculation-result" class="mt-4 p-4 bg-green-50 rounded-lg hidden">
+                            <p id="result-text" class="text-gray-700"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section id="contato" class="py-20 bg-gray-800 text-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Entre em Contato</h2>
+                    <div class="w-24 h-1 bg-green-500 mx-auto mb-6"></div>
+                    <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                        Estamos sempre prontos para atender você. Entre em contato conosco!
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6">Informações de Contato</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-map-marker-alt text-green-500 text-xl mr-4"></i>
+                                <div>
+                                    <p class="font-semibold">Endereço</p>
+                                    <p class="text-gray-300">Jardim Nova América, Hortolândia - SP</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone text-green-500 text-xl mr-4"></i>
+                                <div>
+                                    <p class="font-semibold">Telefone</p>
+                                    <p class="text-gray-300">(19) 99999-5678</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-clock text-green-500 text-xl mr-4"></i>
+                                <div>
+                                    <p class="font-semibold">Horário de Funcionamento</p>
+                                    <p class="text-gray-300">Segunda a Sábado: 7h às 21h</p>
+                                    <p class="text-gray-300">Domingo: 8h às 14h</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6">Envie uma Mensagem</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-gray-300 text-sm font-bold mb-2">Nome:</label>
+                                <input type="text" class="form-input text-gray-800" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-300 text-sm font-bold mb-2">Email:</label>
+                                <input type="email" class="form-input text-gray-800" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-300 text-sm font-bold mb-2">Mensagem:</label>
+                                <textarea class="form-input text-gray-800" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors font-bold">
+                                <i class="fas fa-paper-plane mr-2"></i>Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <img src="qualitymais_logo.png" alt="Quality Mais" class="h-6 mr-2 rounded">
+                        Quality<span class="text-green-500">Mais</span>
+                    </h3>
+                    <p class="text-gray-400 mb-4">
+                        Seu supermercado de bairro, com qualidade, preço justo e atendimento familiar há mais de 15 anos.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#sobre" class="text-gray-400 hover:text-white transition-colors">Sobre Nós</a></li>
+                        <li><a href="#swot" class="text-gray-400 hover:text-white transition-colors">Análise SWOT</a></li>
+                        <li><a href="#setores" class="text-gray-400 hover:text-white transition-colors">Nossos Setores</a></li>
+                        <li><a href="#ofertas" class="text-gray-400 hover:text-white transition-colors">Ofertas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Serviços</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Delivery</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Açougue</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Padaria</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Hortifrúti</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            Jardim Nova América, Hortolândia
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2"></i>
+                            (19) 99999-5678
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-2"></i>
+                            Seg-Sáb: 7h-21h | Dom: 8h-14h
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; <span id="current-year">2024</span> Supermercado Quality Mais. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition-all opacity-0 pointer-events-none no-print">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
