@@ -10,7 +10,7 @@ Este repositório contém o código-fonte de uma landing page moderna e totalmen
 
 Você pode ver o projeto em ação aqui:
 
-**[https://aklamus.github.io/Supermercado-Quality-Mais/)**
+**https://aklamus.github.io/Supermercado-Quality-Mais/**
 
 *(O link acima pressupõe que o projeto está hospedado no GitHub Pages com o nome de repositório `qualitymais-website`)*
 
