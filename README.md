@@ -2,7 +2,7 @@
 
 # Supermercado Quality Mais
 
-Este repositório contém o código-fonte de uma landing page moderna e totalmente responsiva para o supermercado fictício "Qualitymais". O projeto foi desenvolvido para demonstrar habilidades em desenvolvimento front-end, criando uma experiência de usuário rica, interativa e visualmente agradável com HTML semântico, CSS moderno e JavaScript funcional.
+Este repositório contém o código-fonte de uma landing page moderna e totalmente responsiva para o supermercado "Quality Mais". O projeto foi desenvolvido para demonstrar habilidades em desenvolvimento front-end, criando uma experiência de usuário rica, interativa e visualmente agradável com HTML semântico, CSS moderno e JavaScript funcional.
 
 -----
 
