@@ -50,6 +50,3 @@ Este projeto foi construído utilizando as seguintes tecnologias e bibliotecas:
   * **Font Awesome:** Biblioteca de ícones.
 
 -----
-## 📄 Licença
-
-Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
